@@ -1,0 +1,59 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md fixed-top" color-on-scroll="300">
+  <div class="container-fluid my-1">
+    <div class="navbar-translate" (click)="removeFocus()">
+      <div>
+        <img src="../../../assets//images/chnLogo.png" style="width: 80px">
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation" (click)="removeFocus()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
+        <li class="nav-item" *ngIf="!hasItems(item)">
+          <a class="nav-link navColor" [routerLink]="item.path" (click)="addFocus(ind)">
+            <i class="me-1 {{ item.icon }}"></i>{{item.label}}</a>
+        </li>
+        <li class="nav-item" *ngIf="hasItems(item)">
+          <a class="nav-link navColor" (click)="addFocus(ind)">
+            <i class="me-1 {{ item.icon }}"></i>{{item.label}} <i class="fa fa-angle-down"></i></a>
+        </li>
+
+        <div class="submenu click-style{{ind}} container" *ngIf="hasItems(item)" (click)="removeFocus()">
+          <div class="row m-3">
+            <div [ngClass]="{'col-sm-12 col-md-6 col-lg-3 col-xl-3' : (item.subMenu.length) > 3,
+              'col-sm-12 col-md-6 col-lg-4 col-xl-4' : (item.subMenu.length) == 3,
+              'col-sm-12 col-md-12 col-lg-6 col-xl-6' : (item.subMenu.length) == 2,
+              'col-12' : (item.subMenu.length) == 1 }" *ngFor="let submenu of item.subMenu" style="margin-bottom: 1rem;">
+              <span class="submenuText">{{submenu.label}}</span>
+              <ul class="submenu-item mt-1 ms-4">
+                <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()">
+                  <a class="nav-link text-white" [routerLink]="submenuitems.path">
+                    {{submenuitems.label}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <div class="text-end hideContact">
+      <a href="https://twitter.com/ChnTechnologies" target="_blank" class="footerIcon p-2" 
+      pTooltip="Twitter" tooltipPosition="bottom">
+        <i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/people/CHN-Technologies/100068692698660/" target="_blank" class="footerIcon p-2"
+      pTooltip="Facebook" tooltipPosition="bottom">
+          <i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/chntechnologies/" target="_blank" class="footerIcon p-2"
+      pTooltip="Instagram" tooltipPosition="bottom">
+          <i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/chn-technologies-977b7220a/" target="_blank" class="footerIcon p-2"
+      pTooltip="LinkedIn" tooltipPosition="bottom">
+        <i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->

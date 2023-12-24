@@ -1,0 +1,67 @@
+.navbar {
+    /* background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(57 2 112)) */
+    background-color: white;
+    color: rgb(2 72 112);
+}
+
+.navColor{
+    color: rgb(2 72 112);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgb(2 72 112);
+    color: white;
+    text-wrap: nowrap;
+    top: calc(100%);
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    font-size: 15px;
+    right: 0;
+    left: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenuText {
+    color: white
+}
+
+li.nav-item:hover {
+    cursor: pointer;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+    /* Hide on larger screens */
+}
+
+/* .fitContent{
+    display: flex;
+    justify-content: center;
+    min-width: -webkit-fill-available;
+} */
+
+.footerIcon{
+    color: rgb(2 72 112);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hideContact {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .submenu {
+        overflow-y: overlay;
+        max-height: 100%;
+    }
+}

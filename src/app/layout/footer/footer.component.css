@@ -1,0 +1,18 @@
+footer{
+    background: rgb(2 72 112);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerIcon{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.midFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
