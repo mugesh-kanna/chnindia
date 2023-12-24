@@ -28,7 +28,7 @@
               'col-sm-12 col-md-12 col-lg-6 col-xl-6' : (item.subMenu.length) == 2,
               'col-12' : (item.subMenu.length) == 1 }" *ngFor="let submenu of item.subMenu" style="margin-bottom: 1rem;">
               <span class="submenuText">{{submenu.label}}</span>
-              <ul class="submenu-item mt-1 ms-4">
+              <ul class="submenu-item mt-1">
                 <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()">
                   <a class="nav-link text-white" [routerLink]="submenuitems.path">
                     {{submenuitems.label}}</a>

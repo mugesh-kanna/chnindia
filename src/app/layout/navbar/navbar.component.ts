@@ -32,13 +32,31 @@ export class NavbarComponent implements OnInit {
         path: '/pages/home'
       },
       {
-        label: 'ABOUT US',
+        label: 'COMPANY',
         icon: 'fa fa-users',
-        path: ''
+        path: '',
+        subMenu:[
+          {
+            subMenuItems:[
+              {
+                label: 'About Us',
+                path: ''
+              },
+              {
+                label: 'Careers',
+                path: ''
+              },
+              {
+                label: 'Contact Us',
+                path: ''
+              },
+            ]
+          }
+        ]
       },
       {
         label: 'SERVICES',
-        icon: 'fa fa-handshake-o',
+        icon: 'fa fa-info-circle',
         path: '',
         subMenu: [
           {
@@ -185,14 +203,28 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        label: 'CAREERS',
+        label: 'NOQU',
         icon: 'fa fa-briefcase',
         path: ''
       },
       {
-        label: 'CONTACT US',
-        icon: 'fa fa-phone',
-        path: ''
+        label: 'CHANNEL PARTNERS',
+        icon: 'fa fa-handshake-o',
+        path: '',
+        subMenu: [
+          {
+            subMenuItems:[
+              {
+                label : 'NOQU',
+                path: ''
+              },
+              {
+                label : 'CHN',
+                path: ''
+              },
+            ]
+          }
+        ]
       }
     ];
   }
