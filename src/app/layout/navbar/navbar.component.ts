@@ -40,15 +40,15 @@ export class NavbarComponent implements OnInit {
             subMenuItems:[
               {
                 label: 'About Us',
-                path: ''
+                path: '/pages/about-us'
               },
               {
                 label: 'Careers',
-                path: ''
+                path: '/pages/careers'
               },
               {
                 label: 'Contact Us',
-                path: ''
+                path: '/pages/contact-us'
               },
             ]
           }
@@ -68,23 +68,23 @@ export class NavbarComponent implements OnInit {
               },
               {
                 label: 'Cloud Infrastructure',
-                path: ''
+                path: '/pages/cloud-infra'
               },
               {
                 label: 'Networking & Server Administration',
-                path: ''
+                path: '/pages/network-server-admin'
               },
               {
                 label: 'Security & Surveillance Systems',
-                path: ''
+                path: '/pages/security-survillaince'
               },
               {
                 label: 'Data Center Management',
-                path: ''
+                path: '/pages/data-center-manage'
               },
               {
                 label: 'Structured Cabling',
-                path: ''
+                path: '/pages/struct-cabling'
               },
             ]
           },
@@ -93,15 +93,19 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'Web Design and Development',
-                path: ''
+                path: '/pages/web-design-develop'
+              },
+              {
+                label: 'Application Development',
+                path: '/pages/application-develop'
               },
               {
                 label: 'Mobile Application Development',
-                path: ''
+                path: '/pages/mobile-app-develop'
               },
               {
                 label: 'Gaming Application Development',
-                path: ''
+                path: '/pages/game-app-develop'
               },
             ]
           },
@@ -110,23 +114,23 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'Recruitment Processing Outsource',
-                path: ''
+                path: '/pages/recruit-outsource'
               },
               {
                 label: 'HR Outsourcing',
-                path: ''
+                path: '/pages/hr-outsource'
               },
               {
                 label: 'Payroll',
-                path: ''
+                path: '/pages/payroll'
               },
               {
-                label: 'Temporery and Permanent Staffing',
-                path: ''
+                label: 'Temporary and Permanent Staffing',
+                path: '/pages/temp-per-staffing'
               },
               {
                 label: 'Statutory Compliances',
-                path: ''
+                path: '/pages/statutory-complaince'
               },
             ]
           }
@@ -142,19 +146,19 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'Servers',
-                path: ''
+                path: '/pages/servers'
               },
               {
                 label: 'Personal Computers',
-                path: ''
+                path: '/pages/personal-computers'
               },
               {
                 label: 'Projectors',
-                path: ''
+                path: '/pages/projectors'
               },
               {
                 label: 'Printers & Scanners',
-                path: ''
+                path: '/pages/printers-scanners'
               }
             ]
           },
@@ -163,40 +167,44 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'Surveillance Systems',
-                path: ''
+                path: '/pages/surveillance-system'
               },
               {
                 label: 'Switches & Routers',
-                path: ''
+                path: '/pages/switches-routers'
               },
               {
                 label: 'Managed Wifi',
-                path: ''
+                path: '/pages/managed-wifi'
               },
               {
                 label: 'Structured Cables',
-                path: ''
+                path: '/pages/structured-cables'
               },
               {
                 label: 'Data Security & Firewall',
-                path: ''
+                path: '/pages/data-secure-firewall'
               },
             ]
           },
           {
-            label: 'MANAGEMENT SYSTEM',
+            label: 'SOFTWARE SERVICES',
             subMenuItems : [
               {
+                label: 'Rightfax Server',
+                path: '/pages/rightfax-server'
+              },
+              {
                 label: 'School Management System',
-                path: ''
+                path: '/pages/school-management-system'
               },
               {
                 label: 'Document Management System',
-                path: ''
+                path: '/pages/document-management-system'
               },
               {
                 label: 'Retail Management System',
-                path: ''
+                path: '/pages/retail-management-system'
               },
             ]
           },
@@ -205,7 +213,7 @@ export class NavbarComponent implements OnInit {
       {
         label: 'NOQU',
         icon: 'fa fa-briefcase',
-        path: ''
+        path: '/pages/noqu'
       },
       {
         label: 'CHANNEL PARTNERS',
@@ -216,11 +224,11 @@ export class NavbarComponent implements OnInit {
             subMenuItems:[
               {
                 label : 'NOQU',
-                path: ''
+                path: '/pages/noqu'
               },
               {
                 label : 'CHN',
-                path: ''
+                path: '/pages/home'
               },
             ]
           }
