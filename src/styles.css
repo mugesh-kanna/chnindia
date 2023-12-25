@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~aos/dist/aos.css";
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.p-card .p-card-content{
+    text-align: justify;
+    padding: 0 !important;
+}
+.p-card .p-card-title{
+    text-align: center;
+}
+.p-card-header img{
+    border-radius: 6px 6px 0 0;
+}
+
+.mandatory::after {
+    content: " *";
+    color: red;
+}
+
+.p-inline-message.p-component.p-inline-message-error{
+    margin-top: 0.5rem;
+}
+
+.form-control{
+    margin-top: 0.2rem;
+}

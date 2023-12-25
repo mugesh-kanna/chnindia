@@ -39,6 +39,12 @@ import { SchoolManagementSystemComponent } from './school-management-system/scho
 import { DocumentManagementSystemComponent } from './document-management-system/document-management-system.component';
 import { RetailManagementSystemComponent } from './retail-management-system/retail-management-system.component';
 import { NoquCompanyComponent } from './noqu-company/noqu-company.component';
+import { CountUpDirective } from './count-up.directive';
+import {CarouselModule} from 'primeng/carousel';
+import {InputTextModule} from 'primeng/inputtext';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 const routes: Routes = [
@@ -216,7 +222,8 @@ const routes: Routes = [
     SchoolManagementSystemComponent,
     DocumentManagementSystemComponent,
     RetailManagementSystemComponent,
-    NoquCompanyComponent
+    NoquCompanyComponent,
+    CountUpDirective
   ],
   imports: [
     CommonModule,
@@ -225,7 +232,12 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ButtonModule,
     CardModule,
-    TooltipModule
+    TooltipModule,
+    CarouselModule,
+    InputTextModule,
+    MessagesModule,
+    MessageModule,
+    InputTextareaModule,
   ]
 })
 export class PagesModule { }
