@@ -45,6 +45,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { ItSupportResourceComponent } from './it-support-resource/it-support-resource.component';
 
 
 const routes: Routes = [
@@ -183,6 +184,10 @@ const routes: Routes = [
   {
     path: 'noqu',
     component: NoquCompanyComponent
+  },
+  {
+    path: 'it-support-resource',
+    component: ItSupportResourceComponent
   }
 ]
 
@@ -223,7 +228,8 @@ const routes: Routes = [
     DocumentManagementSystemComponent,
     RetailManagementSystemComponent,
     NoquCompanyComponent,
-    CountUpDirective
+    CountUpDirective,
+    ItSupportResourceComponent
   ],
   imports: [
     CommonModule,

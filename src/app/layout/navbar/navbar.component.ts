@@ -31,29 +31,29 @@ export class NavbarComponent implements OnInit {
         icon: 'fa fa-home',
         path: '/pages/home'
       },
-      {
-        label: 'COMPANY',
-        icon: 'fa fa-users',
-        path: '',
-        subMenu:[
-          {
-            subMenuItems:[
-              {
-                label: 'About Us',
-                path: '/pages/about-us'
-              },
-              {
-                label: 'Careers',
-                path: '/pages/careers'
-              },
-              {
-                label: 'Contact Us',
-                path: '/pages/contact-us'
-              },
-            ]
-          }
-        ]
-      },
+      // {
+      //   label: 'COMPANY',
+      //   icon: 'fa fa-users',
+      //   path: '',
+      //   subMenu:[
+      //     {
+      //       subMenuItems:[
+      //         {
+      //           label: 'About Us',
+      //           path: '/pages/about-us'
+      //         },
+      //         {
+      //           label: 'Careers',
+      //           path: '/pages/careers'
+      //         },
+      //         {
+      //           label: 'Contact Us',
+      //           path: '/pages/contact-us'
+      //         },
+      //       ]
+      //     }
+      //   ]
+      // },
       {
         label: 'SERVICES',
         icon: 'fa fa-info-circle',
@@ -107,26 +107,30 @@ export class NavbarComponent implements OnInit {
                 label: 'Gaming Application Development',
                 path: '/pages/game-app-develop'
               },
+              {
+                label: 'Payroll Software Service',
+                path: '/pages/payroll'
+              },
             ]
           },
           {
-            label: 'CONSULTING',
+            label: 'MANPOWER RESOURCING',
             subMenuItems : [
               {
                 label: 'Recruitment Processing Outsource',
                 path: '/pages/recruit-outsource'
               },
-              {
-                label: 'HR Outsourcing',
-                path: '/pages/hr-outsource'
-              },
-              {
-                label: 'Payroll',
-                path: '/pages/payroll'
-              },
+              // {
+              //   label: 'HR Outsourcing',
+              //   path: '/pages/hr-outsource'
+              // },
               {
                 label: 'Temporary and Permanent Staffing',
                 path: '/pages/temp-per-staffing'
+              },
+              {
+                label: 'IT Support Resources',
+                path: '/pages/it-support-resource'
               },
               {
                 label: 'Statutory Compliances',
@@ -209,6 +213,11 @@ export class NavbarComponent implements OnInit {
             ]
           },
         ]
+      },
+      {
+        label: 'CAREERS',
+        icon: 'fa fa-folder-open',
+        path: '/pages/careers'
       },
       {
         label: 'NOQU',

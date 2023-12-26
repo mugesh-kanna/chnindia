@@ -8,6 +8,7 @@ import {MegaMenuModule} from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
 import { FooterComponent } from './footer/footer.component';
 import {TooltipModule} from 'primeng/tooltip';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [BaseComponent, NavbarComponent, FooterComponent],
@@ -18,7 +19,8 @@ import {TooltipModule} from 'primeng/tooltip';
     ReactiveFormsModule,
     MegaMenuModule,
     MenubarModule,
-    TooltipModule
+    TooltipModule,
+    ButtonModule,
   ],
   providers: []
 })

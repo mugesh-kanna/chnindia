@@ -28,3 +28,7 @@
 .form-control{
     margin-top: 0.2rem;
 }
+
+.textFont {
+    font-family: "Gellix-Bold", sans-serif;
+}

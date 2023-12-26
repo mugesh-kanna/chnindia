@@ -45,12 +45,9 @@
     color: rgb(2 72 112);
 }
 
-.textFont {
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .faIcon {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    width: 50%;
 }
 
 #aboutus {

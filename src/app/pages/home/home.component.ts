@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
 
+  isShow: boolean = false;
   alliances: any[] = [];
   showCounter: boolean = false;
   clients: any[] = [];
@@ -17,9 +18,14 @@ export class HomeComponent implements OnInit {
   contactForm: FormGroup;
   submitted: boolean = false;
   activeIndex: number = 0;
+  pathName: string;
 
   constructor(private el: ElementRef, private fb: FormBuilder, private toastr: ToastrService,
-    private router: Router) { }
+    private router: Router) { 
+      this.pathName = window.location.pathname;
+      console.log(this.pathName,'path');
+      
+    }
 
   ngOnInit(): void {
     AOS.init({ disable: 'mobile', duration: 1000 });//AOS - 2

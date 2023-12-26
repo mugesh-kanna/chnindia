@@ -16,3 +16,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+.chnLogo{
+    width: 20%;
+}
+
+.copyRight{
+    font-size: 13px;
+}

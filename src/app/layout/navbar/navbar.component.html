@@ -3,14 +3,14 @@
   <div class="container-fluid my-1">
     <div class="navbar-translate" (click)="removeFocus()">
       <div>
-        <img src="../../../assets//images/chnLogo.png" style="width: 80px">
+        <img src="../../../assets//images/chnLogo.png" style="width: 80px" data-aos="fade-right">
       </div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
     aria-expanded="false" aria-label="Toggle navigation" (click)="removeFocus()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" data-aos="fade-up">
       <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
         <li class="nav-item" *ngIf="!hasItems(item)">
           <a class="nav-link navColor" [routerLink]="item.path" (click)="addFocus(ind)">
@@ -40,7 +40,7 @@
       </ul>
     </div>
 
-    <div class="text-end hideContact">
+    <div class="text-end hideContact" data-aos="fade-left">
       <a href="https://twitter.com/ChnTechnologies" target="_blank" class="footerIcon p-2" 
       pTooltip="Twitter" tooltipPosition="bottom">
         <i class="fa fa-twitter"></i></a>
