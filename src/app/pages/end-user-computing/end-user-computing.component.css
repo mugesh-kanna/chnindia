@@ -18,7 +18,7 @@
 }
 
 .contentText{
-    color: rgb(2 72 112);
+    color: black;
     font-weight: bold;
     text-align: justify;
     font-size: 1.2rem;
@@ -31,7 +31,7 @@
 }
 
 .textColor{
-    color: rgb(2 72 112);
+    color: black;
 }
 
 .faFont{

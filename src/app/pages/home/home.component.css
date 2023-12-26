@@ -86,7 +86,8 @@
 }
 
 .contactIcon{
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    width: 3rem;
 }
 
 div#contactus{

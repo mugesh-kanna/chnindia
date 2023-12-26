@@ -350,19 +350,28 @@
         <div class="row mt-4">
             <h4 class="text-center fw-bold">CONTACT US</h4>
             <div class="col-sm-12 col-md-4 my-2 text-center">
-                <p><i class="contactIcon fa fa-map-marker"></i></p>
-                <h6>ADDRESS</h6>
+                <p>
+                    <!-- <i class="contactIcon fa fa-map-marker"></i> -->
+                    <img src="../../../assets/images/map.png" class="contactIcon">
+                </p>
+                <h6 class="fw-bold">ADDRESS</h6>
                 <p>No. 28, Fourth Main Road, CIT Nagar, Chennai. 600 035.</p>
             </div>
             <div class="col-sm-12 col-md-4 my-2 text-center">
-                <p><i class="contactIcon fa fa-phone"></i></p>
-                <h6>CONTACT NUMBER</h6>
+                <p>
+                    <!-- <i class="contactIcon fa fa-phone"></i> -->
+                    <img src="../../../assets/images/phone.png" class="contactIcon">
+                </p>
+                <h6 class="fw-bold">CONTACT NUMBER</h6>
                 <p>+91 7010203031<br>
                     +91 044 42854198</p>
             </div>
             <div class="col-sm-12 col-md-4 my-2 text-center">
-                <p><i class="contactIcon fa fa-envelope"></i></p>
-                <h6>EMAIL</h6>
+                <p>
+                    <!-- <i class="contactIcon fa fa-envelope"></i> -->
+                    <img src="../../../assets/images/gmail.png" class="contactIcon">
+                </p>
+                <h6 class="fw-bold">EMAIL</h6>
                 <p>info@chnindia.com<br>
                 sales@chnindia.com</p>
             </div>
@@ -402,7 +411,7 @@
                             *ngIf="contactForm.controls.message.errors?.required && (submitted || contactForm.controls.message.dirty || contactForm.controls.message.touched)"></p-message>
                     </div>
                     <div class="col-12 mt-2 text-center">
-                        <p-button label="Submit" icon="pi pi-check" styleClass="p-button-sm p-button-success"
+                        <p-button label="Submit" styleClass="p-button-sm p-button-success"
                         (click)="submitContactForm()"></p-button>
                     </div>
                 </div>

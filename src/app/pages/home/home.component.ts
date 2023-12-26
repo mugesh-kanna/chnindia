@@ -24,12 +24,9 @@ export class HomeComponent implements OnInit {
     private router: Router) { 
       this.pathName = window.location.pathname;
       console.log(this.pathName,'path');
-      
     }
 
   ngOnInit(): void {
-    AOS.init({ disable: 'mobile', duration: 1000 });//AOS - 2
-    AOS.refresh();
     this.alliances = [
       { url: '../../../assets/images/lenovo.png', name: "Lenovo" },
       { url: '../../../assets/images/acer.png', name: "acer" },
