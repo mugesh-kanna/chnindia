@@ -78,9 +78,9 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  slideChanged(event){
+  slideChanged(event) {
     this.activeIndex = event.to;
-    AOS.refresh();  
+    AOS.refresh();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -110,20 +110,24 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  submitContactForm(){
+  submitContactForm() {
     this.submitted = true;
-    if(this.contactForm.valid){
+    if (this.contactForm.valid) {
 
     }
-    else{
+    else {
       this.toastr.success('everything is broken', 'Major Error', {
         timeOut: 3000,
       });
     }
   }
 
-  routeNavigate(path){
+  routeNavigate(path) {
     this.router.navigate([path]);
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
 }
