@@ -19,7 +19,7 @@
 
 .contentText{
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: justify;
     font-size: 1.2rem;
     /* font-family: 'Times New Roman', Times, serif; */
@@ -36,4 +36,8 @@
 
 .faFont{
     font-size: 4rem;
+}
+
+.iconWidth{
+    width: 50%;
 }
