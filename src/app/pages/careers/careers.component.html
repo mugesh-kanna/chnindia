@@ -1,1 +1,139 @@
-<p>careers works!</p>
+<div class="bgcheck">
+    <div class="container"><br>
+        <!-- <div class="bodyAlign" data-aos="zoom-in">
+            <div class="card headerTag my-4">
+                <span class="m-2">JOIN WITH OUR FAMILY</span>
+            </div>
+        </div> -->
+        <h2 class="text-center fw-bold">JOIN WITH OUR FAMILY</h2>
+        <div class="row contentText">
+            <div class="col-12 mb-2" data-aos="fade-right">
+                <h4 class="text-center">At CHN, we're building a global team of amazing people who want to change the technology world.
+                    If you're curious, ambitious, and ready to grow your career with us, we'd love to meet you!
+                </h4>
+            </div>
+            <div class="col-12 mb-2">
+                <h3 class="text-center fw-bold">Some opportunities for you to explore</h3>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-2"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="100">       
+                <p-card styleClass="p-card-shadow h-100">
+                    <ng-template pTemplate="title">
+                        <div class="card-title textFont">
+                            <h4><b>Service Engineer</b></h4>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../../assets/images/servicengineer.jpg">
+                    </ng-template>
+                        <p class="textFont"><b>Job Description: </b>The service engineer's responsibilities include Configuring and installing various network devices and services.</p>
+                        <p class="textFont"><b>Experience: </b>3 - 5 years experience in hardware and networking services.</p> 
+                        <p class="textFont"><b>Education: </b>Diploma / Any degree in computer science.</p>
+                        <div class="text-center"> <p-button label="Apply" styleClass="p-button-sm p-button-success"
+                            (click)="showForm(1)"></p-button></div>      
+                </p-card>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="300">       
+                <p-card styleClass="p-card-shadow h-100">
+                    <ng-template pTemplate="title">
+                        <div class="card-title textFont">
+                            <h4><b>Sales Executive</b></h4>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../../assets/images/salesexecutive.webp">
+                    </ng-template>
+                    <p class="textFont"><b>Job Description: </b>Builds business by identifying and selling prospects; maintaining relationships with clients.</p>
+                        <p class="textFont"><b>Experience: </b>3 - 5 years in IT sales. Good communication and negotiation skills.</p> 
+                        <p class="textFont"><b>Education: </b>Diploma / Any degree.</p> 
+                        <div class="text-center"> <p-button label="Apply" styleClass="p-button-sm p-button-success"
+                            (click)="showForm(2)"></p-button></div>
+                </p-card>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="500">       
+                <p-card styleClass="p-card-shadow h-100">
+                    <ng-template pTemplate="title">
+                        <div class="card-title textFont">
+                            <h4><b>Lead Generation Executive</b></h4>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../../assets/images/lead-generation-executive.jpg">
+                    </ng-template>
+                    <p class="textFont"><b>Job Description: </b>A lead generation executive is responsible for generating new business leads for a company.</p>
+                        <p class="textFont"><b>Experience: </b>2 - 4 years experience in telesales or telecaling. Good Communication skills.</p> 
+                        <p class="textFont"><b>Education: </b>Diploma / Any degree.</p>
+                        <div class="text-center"> <p-button label="Apply" styleClass="p-button-sm p-button-success"
+                            (click)="showForm(3)"></p-button></div>
+                </p-card>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="700">       
+                <p-card styleClass="p-card-shadow h-100">
+                    <ng-template pTemplate="title">
+                        <div class="card-title textFont">
+                            <h4><b>Trainee</b></h4>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../../assets/images/trainee.jpeg">
+                    </ng-template>
+                    <p class="textFont"><b>Job Description: </b>Entry-level positions where people learn the skills and duties needed to work independently.</p>
+                        <p class="textFont"><b>Experience: </b>Freshers / 2019 to 22 passouts.</p> 
+                        <p class="textFont"><b>Education: </b>Diploma / Any degree in computer science.</p>
+                        <div class="text-center"> <p-button label="Apply" styleClass="p-button-sm p-button-success"
+                            (click)="showForm(4)"></p-button></div>
+                </p-card>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<p-dialog [header]="modalHeader" [(visible)]="displayModal" [modal]="true" [style]="{width: '70vw'}"
+    [draggable]="false" [resizable]="false" appendTo="body">
+    <form [formGroup]="appliactionForm" class="mt-4">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mb-2">
+                <label class="mandatory">Name</label>
+                <input type="text" pInputText formControlName="name" placeholder="Enter Your Name"
+                class="form-control">
+                <p-message severity="error" text="Name is required"
+                    *ngIf="appliactionForm.controls.name.errors?.required && (submitted || appliactionForm.controls.name.dirty || appliactionForm.controls.name.touched)"></p-message>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-2">
+                <label class="mandatory">Email</label>
+                        <input type="text" pInputText formControlName="email" placeholder="Enter Your Email"
+                        class="form-control">
+                        <p-message severity="error" text="Email is required"
+                            *ngIf="appliactionForm.controls.email.errors?.required && (submitted || appliactionForm.controls.email.dirty || appliactionForm.controls.email.touched)"></p-message>
+                        <p-message severity="error" text="Enter Valid Email"
+                            *ngIf="appliactionForm.controls.email.errors?.pattern && (submitted || appliactionForm.controls.email.dirty || appliactionForm.controls.email.touched)"></p-message>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-2">
+                <label class="mandatory">Mobile Number</label>
+                        <input type="text" pInputText pKeyFilter="int" formControlName="mobile" placeholder="Enter Your Mobile Number"
+                        class="form-control" maxlength="10">
+                        <p-message severity="error" text="Mobile Number is required"
+                            *ngIf="appliactionForm.controls.mobile.errors?.required && (submitted || appliactionForm.controls.mobile.dirty || appliactionForm.controls.mobile.touched)"></p-message>
+                        <p-message severity="error" text="Enter Valid Mobile Number"
+                            *ngIf="appliactionForm.controls.mobile.errors?.pattern && (submitted || appliactionForm.controls.mobile.dirty || appliactionForm.controls.mobile.touched)"></p-message>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-2">
+                <label for="formFile" class="mandatory">Upload Resume</label>
+                <input class="form-control" type="file" id="formFile">
+                <p-message severity="error" text="File is required"
+                            *ngIf="appliactionForm.controls.file.errors?.required && (submitted || appliactionForm.controls.file.dirty || appliactionForm.controls.file.touched)"></p-message>
+            </div>
+            <div class="col-12 mb-2">
+                <label class="mandatory">Message</label>
+                        <textarea rows="5" pInputTextarea class="form-control" formControlName="message"
+                        placeholder="Enter Your Message"></textarea>
+                        <p-message severity="error" text="Message is required"
+                            *ngIf="appliactionForm.controls.message.errors?.required && (submitted || appliactionForm.controls.message.dirty || appliactionForm.controls.message.touched)"></p-message>
+            </div>
+            <div class="col-12 mt-3 text-center">
+                <p-button label="Submit" styleClass="p-button-sm p-button-success" (click)="submitForm()"></p-button>
+                <p-button label="Cancel" styleClass="p-button-sm p-button-danger mx-2" (click)="displayModal = false"></p-button>
+            </div>
+        </div>
+    </form>
+</p-dialog>

@@ -32,3 +32,17 @@
 .textFont {
     font-family: "Gellix-Bold", sans-serif;
 }
+
+.p-dialog .p-dialog-header{
+    background: rgb(2 72 112) !important;
+    color: white !important;
+    padding: 1rem !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon{
+    color: white !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover{
+    color: black !important;
+}

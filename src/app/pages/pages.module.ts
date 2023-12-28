@@ -46,7 +46,10 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { ItSupportResourceComponent } from './it-support-resource/it-support-resource.component';
-
+import {DialogModule} from 'primeng/dialog';
+import {KeyFilterModule} from 'primeng/keyfilter';
+import {FileUploadModule} from 'primeng/fileupload';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -244,6 +247,10 @@ const routes: Routes = [
     MessagesModule,
     MessageModule,
     InputTextareaModule,
+    DialogModule,
+    KeyFilterModule,
+    FileUploadModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }
