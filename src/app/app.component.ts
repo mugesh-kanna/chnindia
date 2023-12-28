@@ -8,7 +8,7 @@ import * as AOS from 'aos';
 export class AppComponent {
   title = 'CHN';
   ngOnInit(){
-    AOS.init({ disable: 'mobile', duration: 1000 });//AOS - 2
+    AOS.init({ duration: 1000 });//AOS - 2
     AOS.refresh();
   }
 }
