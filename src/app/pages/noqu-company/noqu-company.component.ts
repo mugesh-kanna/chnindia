@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoquCompanyComponent implements OnInit {
 
+  pdfLink = '../../../assets/pdf/NoQu.pdf';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  pdfDownload() {
+    const link = document.createElement('a');
+    link.href = this.pdfLink;
+    link.download = 'noqu.pdf';
+    link.click();
   }
 
 }

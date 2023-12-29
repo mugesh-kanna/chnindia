@@ -1,18 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~aos/dist/aos.css";
 
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer;
 }
 
-.p-card .p-card-content{
+.p-card .p-card-content {
     text-align: justify;
     padding: 0 !important;
 }
-.p-card .p-card-title{
+
+.p-card .p-card-title {
     text-align: center;
 }
-.p-card-header img{
+
+.p-card-header img {
     border-radius: 6px 6px 0 0;
 }
 
@@ -21,11 +23,11 @@
     color: red;
 }
 
-.p-inline-message.p-component.p-inline-message-error{
+.p-inline-message.p-component.p-inline-message-error {
     margin-top: 0.5rem;
 }
 
-.form-control{
+.form-control {
     margin-top: 0.2rem;
 }
 
@@ -33,16 +35,22 @@
     font-family: "Gellix-Bold", sans-serif;
 }
 
-.p-dialog .p-dialog-header{
+.p-dialog .p-dialog-header {
     background: rgb(2 72 112) !important;
     color: white !important;
     padding: 1rem !important;
 }
 
-.p-dialog .p-dialog-header .p-dialog-header-icon{
+.p-dialog .p-dialog-header .p-dialog-header-icon {
     color: white !important;
 }
 
-.p-dialog .p-dialog-header .p-dialog-header-icon:hover{
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover {
     color: black !important;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

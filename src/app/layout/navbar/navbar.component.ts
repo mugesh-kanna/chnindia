@@ -232,13 +232,13 @@ export class NavbarComponent implements OnInit {
           {
             subMenuItems:[
               {
-                label : 'NOQU',
-                path: '/pages/noqu'
-              },
-              {
                 label : 'CHN',
                 path: '/pages/home'
               },
+              {
+                label : 'NOQU',
+                path: '/pages/noqu'
+              }
             ]
           }
         ]

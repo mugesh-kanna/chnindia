@@ -13,11 +13,11 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" data-aos="fade-up">
       <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
         <li class="nav-item" *ngIf="!hasItems(item)">
-          <a class="nav-link navColor" [routerLink]="item.path" (click)="addFocus(ind)" (mouseover)="addFocus(ind)">
+          <a class="nav-link navColor" [routerLink]="item.path" (mouseover)="addFocus(ind)">
             <i class="me-1 {{ item.icon }}"></i>{{item.label}}</a>
         </li>
         <li class="nav-item" *ngIf="hasItems(item)">
-          <a class="nav-link navColor" (click)="addFocus(ind)" (mouseover)="addFocus(ind)">
+          <a class="nav-link navColor" (mouseover)="addFocus(ind)">
             <i class="me-1 {{ item.icon }}"></i>{{item.label}} <i class="fa fa-angle-down"></i></a>
         </li>
 

@@ -1,1 +1,21 @@
-<p>noqu-company works!</p>
+<div class="bgcheck">
+    <div class="container">
+        <div class="bodyAlign" data-aos="zoom-in">
+            <div class="card headerTag my-4">
+                <span class="m-2">NOQU</span>
+            </div>
+        </div>
+
+        <div class="row" data-aos="zoom-in">
+            <div class="col-sm-12 col-md-12 col-lg-2 mb-4 text-end">
+                <p-button label="Download" icon="pi pi-download" styleClass="p-button-sm p-button-success"
+                (click)="pdfDownload()"></p-button>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-8 middle">
+                <pdf-viewer src="../../../assets/pdf/NoQu.pdf" style="width: 100%; height: 75vh" ></pdf-viewer>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-2">
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,7 +16,7 @@
     /* text-wrap: nowrap; */
     top: calc(100%);
     -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 15px;
     /* right: 0;
     left: 0; */
@@ -35,6 +35,10 @@ ul {
 
 li.nav-item:hover {
     cursor: pointer;
+    background-color: rgb(2 72 112);
+    .navColor{
+        color: white;
+    }
 }
 
 .menu-icon {

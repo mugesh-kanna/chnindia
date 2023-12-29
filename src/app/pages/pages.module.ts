@@ -50,6 +50,8 @@ import {DialogModule} from 'primeng/dialog';
 import {KeyFilterModule} from 'primeng/keyfilter';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 const routes: Routes = [
   {
@@ -250,7 +252,8 @@ const routes: Routes = [
     DialogModule,
     KeyFilterModule,
     FileUploadModule,
-    HttpClientModule
+    HttpClientModule,
+    PdfViewerModule
   ]
 })
 export class PagesModule { }
