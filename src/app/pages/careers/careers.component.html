@@ -119,7 +119,7 @@
             </div>
             <div class="col-sm-12 col-md-6 mb-2">
                 <label for="formFile" class="mandatory">Upload Resume</label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" (change)="onSelectFile($event)">
                 <p-message severity="error" text="File is required"
                             *ngIf="appliactionForm.controls.file.errors?.required && (submitted || appliactionForm.controls.file.dirty || appliactionForm.controls.file.touched)"></p-message>
             </div>

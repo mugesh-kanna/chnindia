@@ -2,7 +2,7 @@
     <div class="row" *ngIf="type == 2">
         <div class="col-sm-12 col-md-4 mb-2">
             <label class="mandatory">Products</label>
-            <p-multiSelect [options]="dropValues" formControlName="product" defaultLabel="Select a Product" 
+            <p-multiSelect [options]="dropValues" formControlName="product" defaultLabel="Select a Product" appendTo="body"
             optionLabel="name" selectedItemsLabel="{0} items selected" [style]="{'width':'100%'}"></p-multiSelect>
             <p-message severity="error" text="Product is required"
                 *ngIf="contactForm.controls.product.errors?.required && (submitted || contactForm.controls.product.dirty || contactForm.controls.product.touched)"></p-message>
@@ -34,13 +34,13 @@
             <p-message severity="error" text="Enter Valid Email"
                 *ngIf="contactForm.controls.email.errors?.pattern && (submitted || contactForm.controls.email.dirty || contactForm.controls.email.touched)"></p-message>
         </div>
-        <div class="col-sm-12 mb-2">
+        <!-- <div class="col-sm-12 mb-2">
             <label class="mandatory">Subject</label>
             <input type="text" pInputText formControlName="subject" placeholder="Enter Your Subject"
             class="form-control">
             <p-message severity="error" text="Subject is required"
                 *ngIf="contactForm.controls.subject.errors?.required && (submitted || contactForm.controls.subject.dirty || contactForm.controls.subject.touched)"></p-message>
-        </div>
+        </div> -->
         <div class="col-sm-12 mb-2">
             <label class="mandatory">Message</label>
             <textarea rows="5" pInputTextarea class="form-control" formControlName="message"

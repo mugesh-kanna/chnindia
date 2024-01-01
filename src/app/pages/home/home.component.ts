@@ -2,7 +2,9 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import * as AWS from 'aws-sdk';
 import { ToastrService } from 'ngx-toastr';
+import { AlertService } from 'src/app/services/alert.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,10 +23,10 @@ export class HomeComponent implements OnInit {
   pathName: string;
 
   constructor(private el: ElementRef, private fb: FormBuilder, private toastr: ToastrService,
-    private router: Router) { 
-      this.pathName = window.location.pathname;
-      console.log(this.pathName,'path');
-    }
+    private router: Router, private alertService: AlertService) {
+    this.pathName = window.location.pathname;
+    console.log(this.pathName, 'path');
+  }
 
   ngOnInit(): void {
     this.alliances = [
@@ -78,7 +80,7 @@ export class HomeComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$')]),
       subject: new FormControl('', Validators.required),
       message: new FormControl('', Validators.required),
-      mobile: new FormControl('',[Validators.required, Validators.pattern('^[6-9][0-9]{9,9}$')])
+      mobile: new FormControl('', [Validators.required, Validators.pattern('^[6-9][0-9]{9,9}$')])
     })
   }
 
@@ -117,12 +119,61 @@ export class HomeComponent implements OnInit {
   submitContactForm() {
     this.submitted = true;
     if (this.contactForm.valid) {
+      // Set the region and credentials (replace with your actual credentials)
+      AWS.config.update({
+        accessKeyId: 'AKIA5K53FKAPBNS73IE5',
+        secretAccessKey: 's3QVl2qk3VE0aWmibGpMPRVN/oBk6QWvnzHrPbRp',
+        region: 'ap-south-1'
+      });
 
+      // Create sendEmail params 
+      const params = {
+        Destination: {
+          ToAddresses: [
+            's.lathika1312@gmail.com',
+            /* more items */
+          ]
+        },
+        Message: {
+          Body: {
+            Html: {
+              Charset: "UTF-8",
+              Data: `<p><b>Name:</b> ${this.contactForm.value.name},</p>
+              <p><b>Mobile Number:</b> ${this.contactForm.value.mobile},</p>
+              <p><b>Email Address:</b> ${this.contactForm.value.email},</p>
+              <p><b>Message:</b> ${this.contactForm.value.message},</p>`
+            },
+            // Text: {
+            //   Charset: 'UTF-8',
+            //   Data: 'This is the body of your email.'
+            // }
+          },
+          Subject: {
+            Charset: 'UTF-8',
+            Data: this.contactForm.value.subject
+          }
+        },
+        Source: 'gmkanna532000@gmail.com', // Sender email address
+        // ReplyToAddresses: [optional, add if needed]
+      };
+
+      // Create the promise and SES service object
+      const sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(params).promise();
+
+      // Handle promise's fulfilled/rejected states
+      sendPromise.then(
+        function (data) {
+          console.log('Email sent successfully. MessageId:', data.MessageId);
+          window.alert('Submitted Successfully');
+        }).catch(
+          function (err) {
+            console.error('Error sending email:', err, err.stack);
+            window.alert('Unable to Submit')
+          });
+    this.contactForm.reset();
     }
     else {
-      this.toastr.success('everything is broken', 'Major Error', {
-        timeOut: 3000,
-      });
+      window.alert('Please fill the form correctly')
     }
   }
 

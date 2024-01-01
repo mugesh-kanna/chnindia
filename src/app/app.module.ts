@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PagesService } from './services/pages.service';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 
 @NgModule({
@@ -25,10 +26,12 @@ import { PagesService } from './services/pages.service';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    PdfViewerModule,
+    NgHttpLoaderModule.forRoot(),
     ToastrModule.forRoot(),
     PdfViewerModule
   ],
-  providers: [PagesService],
+  providers: [PagesService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
