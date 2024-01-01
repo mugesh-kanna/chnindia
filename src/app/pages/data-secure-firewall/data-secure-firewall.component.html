@@ -8,23 +8,37 @@
         <div class="row contentText">
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">Email Security</h5>
-                <p>SonicWALL® Email Security solutions employ a variety of proven and patented technology designed to block spam and other threats effectively, easily and economically.</p>
+                <p>SonicWALL® Email Security solutions employ a variety of proven and patented technology designed to
+                    block spam and other threats effectively, easily and economically.</p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-              <h5 class="fw-bold text-center">Network Security</h5>
-              <p>SonicWALL® Next-Generation Firewalls offer superior protection and massive scale to extend state-of-the-art security to growing and distributed enterprise networks.</p>
-          </div>
-          <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-            <h5 class="fw-bold text-center">Untangle Firewall</h5>
-            <p>Untangle’s NG Firewall software package, Complete, is the easiest way to get all the applications you need for a comprehensive, multi-functional firewall solution.</p>
-            <P>The z12 delivers next-generation firewall features for mid-to-large-sized offices. This appliance offers fiber connectivity for increased performance and security efficacy. Ideal for networks with 100-500 users*, this 1U rackmount appliance provides a powerful single device to handle anything from content filtering to perimeter security without compromising performance.</P>
-        </div>
+                <h5 class="fw-bold text-center">Network Security</h5>
+                <p>SonicWALL® Next-Generation Firewalls offer superior protection and massive scale to extend
+                    state-of-the-art security to growing and distributed enterprise networks.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
+                <h5 class="fw-bold text-center">Untangle Firewall</h5>
+                <p>Untangle’s NG Firewall software package, Complete, is the easiest way to get all the applications you
+                    need for a comprehensive, multi-functional firewall solution.</p>
+                <P>The z12 delivers next-generation firewall features for mid-to-large-sized offices. This appliance
+                    offers fiber connectivity for increased performance and security efficacy. Ideal for networks with
+                    100-500 users*, this 1U rackmount appliance provides a powerful single device to handle anything
+                    from content filtering to perimeter security without compromising performance.</P>
+            </div>
             <div class="col-sm-12 col-md-6 mb-4">
                 <img src="../../../assets/images/fire.png" class="w-100" data-aos="fade-down-left">
             </div>
         </div>
+        <div class="text-center pb-4">
+            <button pButton type="button" label="Contact Us" class="p-button-success p-button-sm contact-btn"
+                (click)="showContactForm()"></button>
+        </div>
     </div>
 </div>
 
-  
-  
+<p-dialog [header]="service" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

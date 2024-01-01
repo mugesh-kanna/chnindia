@@ -31,5 +31,15 @@
                 </div>
             </div>
         </div>
+        <div class="text-center pb-4">
+            <button pButton type="button" label="Contact Us" class="p-button-success p-button-sm contact-btn" (click)="showContactForm()"></button>
+        </div>
     </div>
 </div>
+
+<p-dialog [header]="service" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}"
+    [draggable]="false" [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

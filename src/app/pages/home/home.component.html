@@ -380,14 +380,23 @@
         <p-card>
             <form [formGroup]="contactForm">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 mb-2">
+                    <div class="col-sm-12 col-md-4 mb-2">
                         <label class="mandatory">Name</label>
                         <input type="text" pInputText formControlName="name" placeholder="Enter Your Name"
                         class="form-control">
                         <p-message severity="error" text="Name is required"
                             *ngIf="contactForm.controls.name.errors?.required && (submitted || contactForm.controls.name.dirty || contactForm.controls.name.touched)"></p-message>
                     </div>
-                    <div class="col-sm-12 col-md-6 mb-2">
+                    <div class="col-sm-12 col-md-4 mb-2">
+                        <label class="mandatory">Mobile</label>
+                        <input type="text" pInputText pKeyFilter="int" formControlName="mobile" placeholder="Enter Your Mobile Number"
+                        class="form-control" maxlength="10">
+                        <p-message severity="error" text="Mobile Number is required"
+                            *ngIf="contactForm.controls.mobile.errors?.required && (submitted || contactForm.controls.mobile.dirty || contactForm.controls.mobile.touched)"></p-message>
+                        <p-message severity="error" text="Enter Valid Mobile Number"
+                            *ngIf="contactForm.controls.mobile.errors?.pattern && (submitted || contactForm.controls.mobile.dirty || contactForm.controls.mobile.touched)"></p-message>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mb-2">
                         <label class="mandatory">Email</label>
                         <input type="text" pInputText formControlName="email" placeholder="Enter Your Email"
                         class="form-control">

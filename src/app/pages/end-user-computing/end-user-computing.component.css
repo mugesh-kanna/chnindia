@@ -41,3 +41,15 @@
 .iconWidth{
     width: 50%;
 }
+
+.contact-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    /* display: none; */
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

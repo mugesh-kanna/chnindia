@@ -8,7 +8,11 @@
         <div class="row contentText">
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">CAT5/CAT5E</h5>
-                <p>Indoor Horizontal Symmetrical Twisted-Pair Cable For Digital Communications UTP Category 5, in short, UTP CAT5(HSYV5),  is a type of multimedia cable for transmission and communication services, such as data and voice information. It is widely used in broadband access projects such as broadband user networks. Its quality is directly related to the transmission quality of information communication.</p>
+                <p>Indoor Horizontal Symmetrical Twisted-Pair Cable For Digital Communications UTP Category 5, in short,
+                    UTP CAT5(HSYV5), is a type of multimedia cable for transmission and communication services, such as
+                    data and voice information. It is widely used in broadband access projects such as broadband user
+                    networks. Its quality is directly related to the transmission quality of information communication.
+                </p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4 middle">
                 <img src="../../../assets/images/cat1.jpeg" class="iconWidth" data-aos="fade-down-left">
@@ -18,24 +22,47 @@
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-left">
                 <h5 class="fw-bold text-center">CAT 6</h5>
-                <p>UTP CAT6 (HSYV6) is determined by a new performance evaluation index. It adopts 23AWG bare copper as the conductor, polyethylene-based polymer material as the insulator. Its outer sheath material is made of flame-retardant polymer material, and different colors are available. The twisted pair is in line with the international requirements of ISO/IEC, the electrical characteristics exceed the requirements of the six categories (Cat.6) international specifications. The center cross isolation ensures NEXT performance and reasonable construction bending radius.</p>
+                <p>UTP CAT6 (HSYV6) is determined by a new performance evaluation index. It adopts 23AWG bare copper as
+                    the conductor, polyethylene-based polymer material as the insulator. Its outer sheath material is
+                    made of flame-retardant polymer material, and different colors are available. The twisted pair is in
+                    line with the international requirements of ISO/IEC, the electrical characteristics exceed the
+                    requirements of the six categories (Cat.6) international specifications. The center cross isolation
+                    ensures NEXT performance and reasonable construction bending radius.</p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">CAT6A</h5>
-                <P>UTP CAT6A (HSYVP6A) is designed to support the higher frequencies required for 10 Gigabit Ethernet network transmissions and is still compatible with current needs. In addition to meeting EIA/TIA 568-B.2-1 and ISO/IEC 11801:2002 Category 6 requirements, it is also shielded that can immune to cable crosstalk and other external electromagnetic interference.</P>
+                <P>UTP CAT6A (HSYVP6A) is designed to support the higher frequencies required for 10 Gigabit Ethernet
+                    network transmissions and is still compatible with current needs. In addition to meeting EIA/TIA
+                    568-B.2-1 and ISO/IEC 11801:2002 Category 6 requirements, it is also shielded that can immune to
+                    cable crosstalk and other external electromagnetic interference.</P>
             </div>
             <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
                 <img src="../../../assets/images/cat3.jpg" class="iconWidth" data-aos="fade-down-right">
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-              <h5 class="fw-bold text-center">FIBER OPTIC</h5>
-              <P>GYFTY53 uses a Fiber Reinforced Plastic (FRP) as central strength member to provides anti-electromagnetic interference property. The armored structure protects the cable from rat bite and moisture proof. The tubes (and fillers) are stranded around the strength member into a compact and circular core. Then the cable core is covered with a thin polyethylene (PE) inner sheath, which is filled with jelly to protect it from water ingress. A layer of water-blocking material is applied around the cable core to prevent water ingress. It can be used for duct and direct buried application, suitable for frequent lightning area and anti-electric field.</P>
-          </div>
-          <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
-              <img src="../../../assets/images/cat4.jpg" class="iconWidth" data-aos="fade-down-right">
-          </div>
+                <h5 class="fw-bold text-center">FIBER OPTIC</h5>
+                <P>GYFTY53 uses a Fiber Reinforced Plastic (FRP) as central strength member to provides
+                    anti-electromagnetic interference property. The armored structure protects the cable from rat bite
+                    and moisture proof. The tubes (and fillers) are stranded around the strength member into a compact
+                    and circular core. Then the cable core is covered with a thin polyethylene (PE) inner sheath, which
+                    is filled with jelly to protect it from water ingress. A layer of water-blocking material is applied
+                    around the cable core to prevent water ingress. It can be used for duct and direct buried
+                    application, suitable for frequent lightning area and anti-electric field.</P>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+                <img src="../../../assets/images/cat4.jpg" class="iconWidth" data-aos="fade-down-right">
+            </div>
+        </div>
+        <div class="text-center pb-4">
+            <button pButton type="button" label="Contact Us" class="p-button-success p-button-sm contact-btn"
+                (click)="showContactForm()"></button>
         </div>
     </div>
-  </div>
-  
-  
+</div>
+
+<p-dialog [header]="service" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

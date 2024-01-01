@@ -8,22 +8,40 @@
         <div class="row contentText">
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">NEC</h5>
-                <p>High-performance, cost-effective projector offers easy, multifunction operation ideal for many applications that makes them the best projectors in India especially for business and education</p>
+                <p>High-performance, cost-effective projector offers easy, multifunction operation ideal for many
+                    applications that makes them the best projectors in India especially for business and education</p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-              <h5 class="fw-bold text-center">EPSON</h5>
-              <p>Epson has the best projector for your business, from education solutions to conference room projectors</p>
-          </div>
-          <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-            <h5 class="fw-bold text-center">SONY</h5>
-            <p>Engage your audience with versatile, energy-efficient projectors by Sony for schools, colleges and universities. Long-life lamps and smart energy-saving features drive down operating costs while reducing environmental impact.</p>
-        </div>
-        <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-          <h5 class="fw-bold text-center">BENQ</h5>
-          <p>We've been making projectors a long time. So long that we've become the #1 selling DLP brand globally. While that's impressive, it's not the end goal. We're striving every day to do more and make better experiences for you</p>
-      </div>
+                <h5 class="fw-bold text-center">EPSON</h5>
+                <p>Epson has the best projector for your business, from education solutions to conference room
+                    projectors</p>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
+                <h5 class="fw-bold text-center">SONY</h5>
+                <p>Engage your audience with versatile, energy-efficient projectors by Sony for schools, colleges and
+                    universities. Long-life lamps and smart energy-saving features drive down operating costs while
+                    reducing environmental impact.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
+                <h5 class="fw-bold text-center">BENQ</h5>
+                <p>We've been making projectors a long time. So long that we've become the #1 selling DLP brand
+                    globally. While that's impressive, it's not the end goal. We're striving every day to do more and
+                    make better experiences for you</p>
+            </div>
             <div class="col-12 mb-4 text-center">
                 <img src="../../../assets/images/pro.jpg" class="iconWidth" data-aos="fade-down-left">
             </div>
-  
-  
+        </div>
+        <div class="text-center pb-4">
+            <button pButton type="button" label="Contact Us" class="p-button-success p-button-sm contact-btn"
+                (click)="showContactForm()"></button>
+        </div>
+    </div>
+</div>
+
+<p-dialog [header]="service" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

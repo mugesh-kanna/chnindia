@@ -8,7 +8,10 @@
         <div class="row contentText">
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">Cisco</h5>
-                <p>Cisco delivers a comprehensive portfolio of switching solutions for Enterprise Networks, data centers, and smaller businesses. Switches are the basic building blocks for every network. Cisco offers an extensive portfolio of small business network switches for every stage of your business growth.</p>
+                <p>Cisco delivers a comprehensive portfolio of switching solutions for Enterprise Networks, data
+                    centers, and smaller businesses. Switches are the basic building blocks for every network. Cisco
+                    offers an extensive portfolio of small business network switches for every stage of your business
+                    growth.</p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4 middle">
                 <img src="../../../assets/images/s1.png" class="iconWidth" data-aos="fade-down-left">
@@ -18,25 +21,42 @@
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-left">
                 <h5 class="fw-bold text-center">Netgear</h5>
-                <p>NETGEAR 300 Series Gigabit Ethernet Unmanaged Switches provide easy, reliable, and affordable network connectivity for small and medium offices. With these unmanaged plug-and-play switches, you can expand your network connections to multiple devices instantly. The GS324P/GS324PP and GS348PP with Power-over-Ethernet (PoE) provides power and data from a single Ethernet cable to devices such as IP cameras, VoIP/Internet-based phones, wireless access points, etc. With these unmanaged plug-and-play switches, you can expand your network connections to multiple devices instantly.</p>
+                <p>NETGEAR 300 Series Gigabit Ethernet Unmanaged Switches provide easy, reliable, and affordable network
+                    connectivity for small and medium offices. With these unmanaged plug-and-play switches, you can
+                    expand your network connections to multiple devices instantly. The GS324P/GS324PP and GS348PP with
+                    Power-over-Ethernet (PoE) provides power and data from a single Ethernet cable to devices such as IP
+                    cameras, VoIP/Internet-based phones, wireless access points, etc. With these unmanaged plug-and-play
+                    switches, you can expand your network connections to multiple devices instantly.</p>
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
                 <h5 class="fw-bold text-center">TP-LINK</h5>
-                <P>The TL-SG108 Desktop Switch provides an easy way to increase the speed of your network server and backbone connections. Whether you are at home or in the office, the TL-SG108 helps you deal with your business quickly and easily, any time.</P>
+                <P>The TL-SG108 Desktop Switch provides an easy way to increase the speed of your network server and
+                    backbone connections. Whether you are at home or in the office, the TL-SG108 helps you deal with
+                    your business quickly and easily, any time.</P>
             </div>
             <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
                 <img src="../../../assets/images/s3.jpg" class="iconWidth" data-aos="fade-down-right">
             </div>
             <div class="col-sm-12 col-md-6 mb-4" data-aos="fade-right">
-              <h5 class="fw-bold text-center">DLINK</h5>
-              <P>Designed specifically for Small to Medium Businesses, Enterprises and ISPs, the DGS-3630 Series Gigabit L3 Stackable Managed Switches combine 4x embedded 10G stacking/uplink ports, built-in 6kV surge protection, Intelligent Switch Resource Management, and upgradeable software images.</P>
-          </div>
-          <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
-              <img src="../../../assets/images/s4.jpg" class="iconWidth" data-aos="fade-down-right">
-          </div>
+                <h5 class="fw-bold text-center">DLINK</h5>
+                <P>Designed specifically for Small to Medium Businesses, Enterprises and ISPs, the DGS-3630 Series
+                    Gigabit L3 Stackable Managed Switches combine 4x embedded 10G stacking/uplink ports, built-in 6kV
+                    surge protection, Intelligent Switch Resource Management, and upgradeable software images.</P>
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4 middle" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+                <img src="../../../assets/images/s4.jpg" class="iconWidth" data-aos="fade-down-right">
+            </div>
+        </div>
+        <div class="text-center pb-4">
+            <button pButton type="button" label="Contact Us" class="p-button-success p-button-sm contact-btn"
+                (click)="showContactForm()"></button>
         </div>
     </div>
-  </div>
-  
-  
-  
+</div>
+
+<p-dialog [header]="service" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

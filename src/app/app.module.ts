@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PagesService } from './services/pages.service';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     ToastrModule.forRoot(),
     PdfViewerModule
   ],
-  providers: [],
+  providers: [PagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

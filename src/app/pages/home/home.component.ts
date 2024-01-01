@@ -77,7 +77,8 @@ export class HomeComponent implements OnInit {
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$')]),
       subject: new FormControl('', Validators.required),
-      message: new FormControl('', Validators.required)
+      message: new FormControl('', Validators.required),
+      mobile: new FormControl('',[Validators.required, Validators.pattern('^[6-9][0-9]{9,9}$')])
     })
   }
 

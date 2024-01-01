@@ -51,6 +51,8 @@ import {KeyFilterModule} from 'primeng/keyfilter';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 
 const routes: Routes = [
@@ -234,7 +236,8 @@ const routes: Routes = [
     RetailManagementSystemComponent,
     NoquCompanyComponent,
     CountUpDirective,
-    ItSupportResourceComponent
+    ItSupportResourceComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,
@@ -253,7 +256,8 @@ const routes: Routes = [
     KeyFilterModule,
     FileUploadModule,
     HttpClientModule,
-    PdfViewerModule
+    PdfViewerModule,
+    MultiSelectModule,
   ]
 })
 export class PagesModule { }
