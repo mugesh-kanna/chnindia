@@ -22,7 +22,7 @@ export class CareersComponent implements OnInit {
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$')]),
       mobile: new FormControl('', [Validators.required, Validators.pattern('[6-9]\\d{9}')]),
-      file: new FormControl('', Validators.required),
+      file: new FormControl(''),
       message: new FormControl('', Validators.required)
     })
   }

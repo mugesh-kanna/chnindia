@@ -117,12 +117,12 @@
                         <p-message severity="error" text="Enter Valid Mobile Number"
                             *ngIf="appliactionForm.controls.mobile.errors?.pattern && (submitted || appliactionForm.controls.mobile.dirty || appliactionForm.controls.mobile.touched)"></p-message>
             </div>
-            <div class="col-sm-12 col-md-6 mb-2">
+            <!-- <div class="col-sm-12 col-md-6 mb-2">
                 <label for="formFile" class="mandatory">Upload Resume</label>
                 <input class="form-control" type="file" id="formFile" (change)="onSelectFile($event)">
                 <p-message severity="error" text="File is required"
                             *ngIf="appliactionForm.controls.file.errors?.required && (submitted || appliactionForm.controls.file.dirty || appliactionForm.controls.file.touched)"></p-message>
-            </div>
+            </div> -->
             <div class="col-12 mb-2">
                 <label class="mandatory">Message</label>
                         <textarea rows="5" pInputTextarea class="form-control" formControlName="message"
