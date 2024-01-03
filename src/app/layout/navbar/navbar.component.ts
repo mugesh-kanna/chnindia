@@ -224,25 +224,25 @@ export class NavbarComponent implements OnInit {
         icon: 'fa fa-briefcase',
         path: '/pages/noqu'
       },
-      {
-        label: 'CHANNEL PARTNERS',
-        icon: 'fa fa-handshake-o',
-        path: '',
-        subMenu: [
-          {
-            subMenuItems:[
-              {
-                label : 'CHN',
-                path: '/pages/home'
-              },
-              {
-                label : 'NOQU',
-                path: '/pages/noqu'
-              }
-            ]
-          }
-        ]
-      }
+      // {
+      //   label: 'CHANNEL PARTNERS',
+      //   icon: 'fa fa-handshake-o',
+      //   path: '',
+      //   subMenu: [
+      //     {
+      //       subMenuItems:[
+      //         {
+      //           label : 'CHN',
+      //           path: '/pages/home'
+      //         },
+      //         {
+      //           label : 'NOQU',
+      //           path: '/pages/noqu'
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // }
     ];
   }
 

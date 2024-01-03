@@ -71,6 +71,7 @@ li.nav-item:hover {
 @media (max-width: 768px) {
     .submenu {
         overflow-y: overlay;
-        max-height: 100%;
+        max-height: 50vh;
+        position: relative;
     }
 }
