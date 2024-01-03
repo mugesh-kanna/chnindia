@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
   constructor(private el: ElementRef, private fb: FormBuilder, private toastr: ToastrService,
     private router: Router, private alertService: AlertService) {
     this.pathName = window.location.pathname;
-    console.log(this.pathName, 'path');
   }
 
   ngOnInit(): void {

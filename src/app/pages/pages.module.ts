@@ -53,6 +53,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { NoquChannelPartnerComponent } from './noqu-channel-partner/noqu-channel-partner.component';
+import { ChnChannelPartnerComponent } from './chn-channel-partner/chn-channel-partner.component';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 const routes: Routes = [
@@ -195,6 +198,14 @@ const routes: Routes = [
   {
     path: 'it-support-resource',
     component: ItSupportResourceComponent
+  },
+  {
+    path: 'noqu-channel-partner',
+    component: NoquChannelPartnerComponent
+  },
+  {
+    path: 'chn-channel-partner',
+    component: ChnChannelPartnerComponent
   }
 ]
 
@@ -237,7 +248,9 @@ const routes: Routes = [
     NoquCompanyComponent,
     CountUpDirective,
     ItSupportResourceComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NoquChannelPartnerComponent,
+    ChnChannelPartnerComponent
   ],
   imports: [
     CommonModule,
@@ -258,6 +271,7 @@ const routes: Routes = [
     HttpClientModule,
     PdfViewerModule,
     MultiSelectModule,
+    DropdownModule
   ]
 })
 export class PagesModule { }

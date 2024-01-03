@@ -1,0 +1,224 @@
+<div class="bgcheck">
+    <div class="container">
+        <div class="row pt-2" *ngIf="showTemplate">
+            <div class="col-12 mb-4">
+                <div class="row" data-aos="zoom-in">
+                    <div class="col-md-6 col-12 mb-2 bodyAlign">
+                        <div class="text-center">
+                            <h1><b> <span class="text-warning">CHN</span> Partner Program </b></h1>
+                            <h3>Paving the way to a mutual growth.</h3>
+                            <h6>Embark on a CHN-powered journey of expansion with
+                                boundless opportunities and enhanced user experience</h6><br>
+                            <button pButton pRipple type="button" label="Become a Partner"
+                                class="p-button-raised  p-button-warning"
+                                (click)="showForm()"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 my-4">
+                        <img src="../../../assets/images/noqu-cp-1.png" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4 text-center" data-aos="fade-up">
+                <h1><b>Why join CHN as a Channel Partner?</b></h1>
+                <div class="row pt-4">
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <img src="../../../assets/images/noqu-cp-2.png" class="iconWidth">
+                            <h5 class="text-warning pt-2"><b>Full-Spectrum Support</b></h5>
+                            <p>Enjoy comprehensive support, personalized training, and the guidance of a
+                                dedicated channel manager at every step.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <img src="../../../assets/images/noqu-cp-3.png" class="iconWidth">
+                            <h5 class="text-warning pt-2"><b>Rewarding Commissions</b></h5>
+                            <p>Reap the benefits of competitive commissions and performance-based
+                                incentives, ensuring your success is acknowledged.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <img src="../../../assets/images/noqu-cp-4.png" class="iconWidth">
+                            <h5 class="text-warning pt-3"><b>Drive Sales with CHN</b></h5>
+                            <p>Explore co-selling opportunities Gain access to specialized sales
+                                enablement training Unlock monetary incentives and
+                                participate in our rewards program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4 text-center" data-aos="fade-left-up">
+                <h1><b>Why Forge a Partnership with CHN?</b></h1>
+                <h5>Partnering with CHN can assuredly enhance your customer service multi-fold.</h5>
+                <div class="row pt-4">
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <h1 class="text-warning"><b>1000+</b></h1>
+                            <h5>Active Users</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <h1 class="text-warning"><b>1000+</b></h1>
+                            <h5>Downloaded</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-2 bodyAlign">
+                        <div>
+                            <h1 class="text-warning"><b>12+</b></h1>
+                            <h5>Countries Covered</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-4" *ngIf="!showTemplate" data-aos="zoom-in">
+            <div class="bodyAlign">
+                <div class="card headerTag my-4">
+                    <span class="m-2">PARTNER PROGRAM REGISTRATION</span>
+                </div>
+            </div>
+            <div class="p-card pb-4">
+                <form [formGroup]="partnerForm">
+                    <div class="pt-4 pb-2 text-center textColor">
+                        <h6>COMPANY INFORMATION</h6>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Company Name</label>
+                            <input type="text" pInputText formControlName="companyName"
+                                placeholder="Enter Your Company Name" class="form-control">
+                            <p-message severity="error" text="Company Name is required"
+                                *ngIf="partnerForm.controls.companyName.errors?.required && (submitted || partnerForm.controls.companyName.dirty || partnerForm.controls.companyName.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Type of Company</label>
+                            <p-dropdown [options]="companyTypes" formControlName="companyType" appendTo="body"
+                                placeholder="Select Type of Company" (onChange)="selectCompanyType()"></p-dropdown>
+                            <p-message severity="error" text="Type of Company is required"
+                                *ngIf="partnerForm.controls.companyType.errors?.required && (submitted || partnerForm.controls.companyType.dirty || partnerForm.controls.companyType.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2" *ngIf="partnerForm.value.companyType == 4">
+                            <label class="mandatory">Other Type</label>
+                            <input type="text" pInputText formControlName="otherCompanyType"
+                                placeholder="Enter Your Other Type" class="form-control">
+                            <p-message severity="error" text="Other Type is required"
+                                *ngIf="partnerForm.controls.otherCompanyType.errors?.required && (submitted || partnerForm.controls.otherCompanyType.dirty || partnerForm.controls.otherCompanyType.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Company Address</label>
+                            <textarea rows="4" pInputTextarea class="form-control" formControlName="companyAddress"
+                        placeholder="Enter Your Company Address"></textarea>
+                            <p-message severity="error" text="Company Address is required"
+                                *ngIf="partnerForm.controls.companyAddress.errors?.required && (submitted || partnerForm.controls.companyAddress.dirty || partnerForm.controls.companyAddress.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Company Size</label>
+                            <p-dropdown [options]="companySizes" formControlName="companySize" appendTo="body"
+                                placeholder="Select Type of Company"></p-dropdown>
+                            <p-message severity="error" text="Company Size is required"
+                                *ngIf="partnerForm.controls.companySize.errors?.required && (submitted || partnerForm.controls.companySize.dirty || partnerForm.controls.companySize.touched)"></p-message>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 pb-2 text-center textColor">
+                        <h6>CONTACT INFORMATION</h6>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Full Name</label>
+                            <input type="text" pInputText formControlName="fullName"
+                                placeholder="Enter Your Full Name" class="form-control">
+                            <p-message severity="error" text="Full Name is required"
+                                *ngIf="partnerForm.controls.fullName.errors?.required && (submitted || partnerForm.controls.fullName.dirty || partnerForm.controls.fullName.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">E Mail</label>
+                            <input type="text" pInputText formControlName="email"
+                                placeholder="Enter Your E Mail" class="form-control">
+                            <p-message severity="error" text="E Mail is required"
+                                *ngIf="partnerForm.controls.email.errors?.required && (submitted || partnerForm.controls.email.dirty || partnerForm.controls.email.touched)"></p-message>
+                                <p-message severity="error" text="Enter Valid Email"
+                                *ngIf="partnerForm.controls.email.errors?.pattern && (submitted || partnerForm.controls.email.dirty || partnerForm.controls.email.touched)"></p-message>    
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Contact No</label>
+                            <input type="text" pInputText formControlName="mobile" pKeyFilter="int"
+                                placeholder="Enter Your Contact No" class="form-control">
+                            <p-message severity="error" text="Contact No is required"
+                                *ngIf="partnerForm.controls.mobile.errors?.required && (submitted || partnerForm.controls.mobile.dirty || partnerForm.controls.mobile.touched)"></p-message>
+                                <p-message severity="error" text="Enter Valid Contact No"
+                            *ngIf="partnerForm.controls.mobile.errors?.pattern && (submitted || partnerForm.controls.mobile.dirty || partnerForm.controls.mobile.touched)"></p-message>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 pb-2 text-center textColor">
+                        <h6>ADDRESS</h6>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">City</label>
+                            <input type="text" pInputText formControlName="city"
+                                placeholder="Enter Your City" class="form-control">
+                            <p-message severity="error" text="City is required"
+                                *ngIf="partnerForm.controls.city.errors?.required && (submitted || partnerForm.controls.city.dirty || partnerForm.controls.city.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">State / province</label>
+                            <input type="text" pInputText formControlName="state"
+                                placeholder="Enter Your State / province" class="form-control">
+                            <p-message severity="error" text="State / province is required"
+                                *ngIf="partnerForm.controls.state.errors?.required && (submitted || partnerForm.controls.state.dirty || partnerForm.controls.state.touched)"></p-message>  
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label class="mandatory">Zip / Postal Code</label>
+                            <input type="text" pInputText formControlName="pincode" pKeyFilter="int"
+                                placeholder="Enter Your Zip / Postal Code" class="form-control">
+                            <p-message severity="error" text="Zip / Postal Code is required"
+                                *ngIf="partnerForm.controls.pincode.errors?.required && (submitted || partnerForm.controls.pincode.dirty || partnerForm.controls.pincode.touched)"></p-message>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 pb-2 text-center textColor">
+                        <h6>ADDITIONAL INFORMATION</h6>
+                    </div>
+                    <div class="row px-4">
+                        <div class="col-md-6 col-12 mb-2">
+                            <label>Website( if applicable)</label>
+                            <input type="text" pInputText formControlName="website"
+                                placeholder="Enter Your Website( if applicable)" class="form-control">
+                            <p-message severity="error" text="Website( if applicable) is required"
+                                *ngIf="partnerForm.controls.website.errors?.required && (submitted || partnerForm.controls.website.dirty || partnerForm.controls.website.touched)"></p-message>
+                        </div>
+                        <div class="col-md-6 col-12 mb-2">
+                            <label>Social media link</label>
+                            <input type="text" pInputText formControlName="socialMedia"
+                                placeholder="Enter Your Social media link" class="form-control">
+                            <p-message severity="error" text="Social media link is required"
+                                *ngIf="partnerForm.controls.socialMedia.errors?.required && (submitted || partnerForm.controls.socialMedia.dirty || partnerForm.controls.socialMedia.touched)"></p-message>  
+                        </div>
+                    </div>
+                    <div class="py-3 text-center">
+                        <button pButton type="button" label="Submit" class="p-button-sm p-button-success"
+                        (click)="submitForm()"></button>
+                        <button pButton type="button" label="Cancel" class="p-button-sm p-button-danger mx-2"
+                        (click)="cancelForm()"></button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p-dialog header="Confirmation" [(visible)]="confirmModal" [modal]="true" [style]="{width: '70vw'}"
+    [draggable]="false" [resizable]="false" appendTo="body">
+    <div class="pt-3 text-center">
+        <h3>Thank You!</h3>
+        <h5>CHN Team will Contact Shortly.</h5>
+        <button pButton type="button" label="Okay" class="p-button-sm p-button-warning my-2"
+                        (click)="confirmModal = false"></button>
+    </div>
+</p-dialog>

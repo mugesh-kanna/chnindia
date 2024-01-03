@@ -54,3 +54,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.p-dropdown{
+    min-width: 100% !important
+}
