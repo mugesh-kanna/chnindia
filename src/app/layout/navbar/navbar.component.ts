@@ -251,7 +251,14 @@ export class NavbarComponent implements OnInit {
   }
 
   removeFocus() {
-    $(".submenu").css("display", "none")
+    $(".submenu").css("display", "none");
+    // $(document).ready(function() {
+    //   $('.navbar-nav a').on('click', function() {
+    //     if ($(window).width() < 992) {
+    //       $('.navbar-toggler').click();
+    //     }
+    //   });
+    // });
   }
 
 

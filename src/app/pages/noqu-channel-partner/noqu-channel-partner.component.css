@@ -28,6 +28,7 @@
 }
 
 .headerTag{
+        border: none;
     background-color: #0065bc;
     color: white;
     font-weight: bold;

@@ -5,7 +5,7 @@
 .carousel-caption h3 {
     font-size: 240%;
     font-weight: bold;
-    }
+}
 .carousel-caption {
     top: 30%;
     width: 60%;
@@ -26,11 +26,12 @@
     }
 }
 
-/* @media (max-width: 768px) {
-    .carousel-caption {
-        top: 0%;
+@media (max-width: 768px) {
+    .carousel-caption h3 {
+        font-size: 150%;
+        font-weight: bold;
     }
-} */
+}
 
 .buttonColor {
     background: #0065b0;

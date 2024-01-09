@@ -26,6 +26,7 @@
 }
 
 .headerTag{
+        border: none;
     background-color:#0065b3;
     color: white;
     font-weight: bold;

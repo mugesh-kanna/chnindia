@@ -6,18 +6,19 @@
         <img src="../../../assets/images/CHN logo.png" style="width: 100px" data-aos="fade-right">
       </div>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    <button class="navbar-toggler buttonBorder" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
     aria-expanded="false" aria-label="Toggle navigation" (click)="removeFocus()">
-      <span class="navbar-toggler-icon"></span>
+    <i class="fa fa-bars footerIcon"></i>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" data-aos="fade-up">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
-        <li class="nav-item" *ngIf="!hasItems(item)">
+        <li class="nav-item" *ngIf="!hasItems(item)" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
           <a class="nav-link navColor" [routerLink]="item.path" (mouseover)="addFocus(ind)">
             <i class="me-1 {{ item.icon }}"></i>{{item.label}}</a>
         </li>
         <li class="nav-item" *ngIf="hasItems(item)">
-          <a class="nav-link navColor" (mouseover)="addFocus(ind)">
+          <a class="nav-link navColor cursor-pointer" (mouseover)="addFocus(ind)">
             <i class="me-1 {{ item.icon }}"></i>{{item.label}} <i class="fa fa-angle-down"></i></a>
         </li>
 
@@ -29,7 +30,9 @@
               'col-12' : (item.subMenu.length) == 1 }" *ngFor="let submenu of item.subMenu" style="margin-bottom: 1rem;">
               <span class="submenuText">{{submenu.label}}</span>
               <ul class="submenu-item mt-1">
-                <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()">
+                <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
                   <a class="nav-link text-white" [routerLink]="submenuitems.path">
                     {{submenuitems.label}}</a>
                 </li>
