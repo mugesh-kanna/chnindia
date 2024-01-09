@@ -26,8 +26,9 @@
 }
 
 .headerTag {
-  background-color: rgb(2 72 112);
+  background-color: #0065bc;
   color: white;
+  font-weight: bold;
 }
 
 .textColor {
@@ -51,7 +52,7 @@
 .contact-btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  left: 9px;
   /* display: none; */
   padding: 10px 15px;
   color: #fff;

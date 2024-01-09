@@ -7,6 +7,9 @@
     min-height: 100vh;
     /* opacity: 0.2 */
 }
+.span-textColor h1{
+    color: #0065bc;
+}
 
 .headerAlign{
     display: flex;
@@ -28,12 +31,12 @@
 }
 
 .headerTag{
-    background-color: rgb(2 72 112);
+    background-color: #0065bc;
     color: white;
 }
 
 .textColor{
-    color: rgb(2 72 112);
+    color: #0065bc;
 }
 
 .faFont{
@@ -42,14 +45,19 @@
 
 .iconWidth{
     width: 50%;
+    color: #0065bc;
 }
 
 .p-card{
     border: none;
     border-radius: 0.5rem;
-    background: white
+    background: #fff;
+    
 }
 
 label{
     display: flex;
 }
+
+
+    

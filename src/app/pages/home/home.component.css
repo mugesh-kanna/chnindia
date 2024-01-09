@@ -2,10 +2,15 @@
     filter: brightness(30%);
 }
 
+.carousel-caption h3 {
+    font-size: 240%;
+    font-weight: bold;
+    }
 .carousel-caption {
     top: 30%;
     width: 60%;
-    left: 20%
+    left: 20%;
+    font-weight: 500;
 }
 
 #carouselExampleCaptions .carousel-item img {
@@ -28,12 +33,13 @@
 } */
 
 .buttonColor {
-    background: rgb(2 72 112);
+    background: #0065b0;
     border: none;
 }
 
 .about {
     text-align: justify;
+
 }
 
 .visionRow {
@@ -42,7 +48,7 @@
 }
 
 .headColor {
-    color: rgb(2 72 112);
+    color: #0065b0;
 }
 
 .faIcon {

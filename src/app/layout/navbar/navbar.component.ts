@@ -220,7 +220,7 @@ export class NavbarComponent implements OnInit {
         path: '/pages/careers'
       },
       {
-        label: 'NOQU',
+        label: 'NoQu',
         icon: 'fa fa-briefcase',
         path: '/pages/noqu'
       },
@@ -236,7 +236,7 @@ export class NavbarComponent implements OnInit {
                 path: '/pages/chn-channel-partner'
               },
               {
-                label : 'NOQU',
+                label : 'NoQu',
                 path: '/pages/noqu-channel-partner'
               }
             ]

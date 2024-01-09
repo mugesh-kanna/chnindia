@@ -56,6 +56,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import { NoquChannelPartnerComponent } from './noqu-channel-partner/noqu-channel-partner.component';
 import { ChnChannelPartnerComponent } from './chn-channel-partner/chn-channel-partner.component';
 import {DropdownModule} from 'primeng/dropdown';
+import { NoquHomeComponent } from './noqu-home/noqu-home.component';
 
 
 const routes: Routes = [
@@ -206,6 +207,10 @@ const routes: Routes = [
   {
     path: 'chn-channel-partner',
     component: ChnChannelPartnerComponent
+  },
+  {
+    path: 'noqu-home',
+    component: NoquHomeComponent
   }
 ]
 
@@ -250,7 +255,8 @@ const routes: Routes = [
     ItSupportResourceComponent,
     ContactFormComponent,
     NoquChannelPartnerComponent,
-    ChnChannelPartnerComponent
+    ChnChannelPartnerComponent,
+    NoquHomeComponent,
   ],
   imports: [
     CommonModule,

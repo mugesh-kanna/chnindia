@@ -1,6 +1,6 @@
 .bgcheck{
     /* background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url('../../../assets/images/gameapp.png'); */
-    background: rgb(220 242 255);
+    background: #fff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +20,7 @@
 }
 
 .contentText{
-    color: black;
+    color: #0065bc;
     /* font-weight: bold; */
     text-align: justify;
     font-size: 1.2rem;
@@ -28,12 +28,13 @@
 }
 
 .headerTag{
-    background-color: rgb(2 72 112);
+    background-color: #0065bc;
     color: white;
+    font-weight: bold;
 }
 
 .textColor{
-    color: rgb(2 72 112);
+    color: #0065bc;
 }
 
 .faFont{

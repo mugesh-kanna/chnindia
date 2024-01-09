@@ -1,5 +1,5 @@
 footer{
-    background: rgb(2 72 112);
+    background: #0065b3;
     color: white;
     /* display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ footer{
 }
 
 .chnLogo{
-    width: 20%;
+    width: 30%;
 }
 
 .copyRight{

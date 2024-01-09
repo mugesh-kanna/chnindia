@@ -1,17 +1,17 @@
 .navbar {
     /* background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(57 2 112)) */
-    background-color: white;
-    color: rgb(2 72 112);
+    background-color: #fff;
+    color: #0065b3;
 }
 
 .navColor{
-    color: rgb(2 72 112);
+    color: #0065b3;
 }
 
 .submenu {
     display: none;
     position: absolute;
-    background: rgb(2 72 112);
+    background: #4e87b2;
     color: white;
     /* text-wrap: nowrap; */
     top: calc(100%);
@@ -30,12 +30,50 @@ ul {
 }
 
 .submenuText {
-    color: #f5dc2d
+    color: #ffbb08;
+    font-weight: bold;
 }
+.navbar {
+    border-bottom: 1px solid #BBBBBB;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0065b3;
+    padding: 15px 0px;
+    margin: 0px 15px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.70;
+  }
+  
+  .nav-link:hover {
+    opacity: 1;
+  }
+  
+  .nav-link::before {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #0065b3;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
 
-li.nav-item:hover {
+/*li.nav-item:hover {
     cursor: pointer;
-    background-color: rgb(2 72 112);
+    background: color #0065b3;;
     .navColor{
         color: white;
     }
@@ -44,7 +82,7 @@ li.nav-item:hover {
 .menu-icon {
     cursor: pointer;
     display: none;
-    /* Hide on larger screens */
+    /* Hide on larger screens 
 }
 
 /* .fitContent{
@@ -54,7 +92,7 @@ li.nav-item:hover {
 } */
 
 .footerIcon{
-    color: rgb(2 72 112);
+    color: #0065b3;
     font-size: 1.5rem;
 }
 
